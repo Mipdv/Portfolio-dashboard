@@ -22,4 +22,4 @@ response_text = chat_completion.choices[0].message.content
 
 print(response_text)
 
-teste 1
+teste teste novo
