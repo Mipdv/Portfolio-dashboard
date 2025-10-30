@@ -23,3 +23,4 @@ response_text = chat_completion.choices[0].message.content
 print(response_text)
 
 teste teste novo
+sadsadasd aafasdgfasgsg
