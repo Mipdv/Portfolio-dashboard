@@ -5,8 +5,8 @@
 {% endblock %}
 
 {% block main %}
-<h1 class="pt-5 mt-5">Henrique "Mip" Marinho</h1>
-  <h2 class="mb-3 text-secondary">27-year-old Full-time Lawyer| Post-graduted in Legal Operations | Specialist in Brazil's Social Security | Legal Consultant in Software Automation Projects  </h2>
+<h1 class="pt-5 mt-5" style="color: #1E90FF">Henrique "Mip" Marinho</h1>
+  <h2 class="mb-3 text-secondary">Full-time Lawyer| Post-graduted in Legal Operations | Specialist in Brazil's Social Security | Legal Consultant in Software Automation Projects  </h2>
   <div class="mt-3">
     <nav class="nav">
       <a href="https://www.linkedin.com/in/henrique-marinho-2216982b6/" class="btn btn-primary me-4">Linkedln</a>
@@ -17,7 +17,7 @@
 
     <div class="mt-5">
       <h2>About Me</h2>
-      <p>Hi! I'm Henrique Marinho, a 27 year old lawyer that likes inovation, tecnologies, progressive laws, cinema and games in general.</p>
+      <p>Hi! I'm Henrique Marinho, a lawyer that likes inovation, tecnologies, progressive laws, cinema and games in general.</p>
       <p>I am currently studing programing by myself, with some online courses, like CS50, Data ICMC SQL (From Brazil's USP University) and planing to take Javanauta Academy and CS193p swift course by Stanford University, but i plain to start Informations Systems degree in 2026. </p>
       <p>My main goal is to become a full-stack devoloper, but data science field is very appel to me, and mobile too. Probably, i will decide with time, and for now, i gotta maintain my foucus, only looking for geting better with studies and praticing at programing. </p>
       <p>As for my actual job, i have 6 years experience in social security field, acting as a lawyer in Marcos Inácio Advogaods, one of the biggest Brazil's Law firms, and consultant for lawsuits against the federal goverment, specially involving injurie law, retiremnts, death pensions, paid maternity leaves, and pensions for disable persons. I have acted in more than 1000 cases, with federal courts and supreme courts, working from the begining to the end of the case. </p>
@@ -26,7 +26,7 @@
     </div>
 
     <div class="text-center mt-5">
-     <h2>Prominent Cases</h2>
+     <h2 style="color: #1E90FF">Prominent Cases</h2>
           <p>
             In this topic, I will use fictional names, for client policy.
           </p>
@@ -36,7 +36,7 @@
     <div class="row g-0 h-100"> 
       
       <div class="col-md-4 card-img-container">
-        <img src="{{ url_for('static', filename='img/mia.png') }}" 
+        <img src="{{ url_for('static', filename='img/justice.jpg') }}" 
              class="img-fluid rounded-start h-100 object-fit-cover" 
              alt="Mia">
       </div>
@@ -44,12 +44,14 @@
       <div class="col-md-8">
         <div class="card-body custom-info-box">
           
-          <h3 class="card-title">
+          <h3 class="card-title" style="color: #1E90FF">
             Elizabeth Wilson vs INSS (Instituto Nacional do Seguro Social)
           </h3>
           <p class="card-text">
-            I represented a disabled client who lost her initial benefit. Through deep investigation, I found her benefit was wrongfully granted; she was entitled to a **permanent death pension** from her deceased father. I won the federal case, securing **five years of back payments** and a new, permanent lifetime pension.
-          </p>
+             I represented a disabled client who lost her initial benefit. Through deep investigation, I found her benefit was wrongfully granted; she was entitled to a
+        <strong>permanent death pension</strong> from her deceased father. I won the federal case, securing
+        <strong>five years of back payments</strong> and a new, permanent lifetime pension.
+      </p>
 
           
         </div>
@@ -58,19 +60,50 @@
     </div>
   </div>
 </div>
-      <h3>Michel Freeman vs CEBAP (Centro de Estudos dos Benefícios dos Aposentados e Pensionistas) and INSS (Instituto Nacional do Seguro Social)</h3>
-      <p>This case was a chalenging one, since the client had 83 years old, and came to my office to report a discont on his retirement, and he was despered, since it wasn't a logical reson for that discount. After a deep research, i found that the association was monthy discounting his retirement before he could even question it, for about 4 years straight.
-        After going to the INSS local agency, he was told that discount was legal, and probably he had singed an oficial documment authorzing that discount, but he never received any document to sign. In this line, i filed a lawsuit against both the association and the INSS, claiming the ilegal discount and asking for all the back payments plus damages for material and moral distress.
-        After a online hearing, we wont the case, and he recived all the money that was wrongfully discounten, plus an extra amount for moral and material damages. Some months after the case was over, and federal investigation was openned against the association, that was found guilty of fraud and ilegal acts against other retirees too.
+
+    <div class="container mt-5">
+      <div class="row justify-content-end"> <div class="col-md-9 col-lg-8 ms-auto"> 
+      
+      <div class="card mb-3 custom-card">
+        <div class="row g-0 h-100"> 
+          
+          <div class="col-md-4 card-img-container">
+            <img src="{{ url_for('static', filename='img/justice.jpg') }}" 
+                 class="img-fluid rounded-start h-100 object-fit-cover" 
+                 alt="Mia">
+          </div>
+          
+          <div class="col-md-8">
+            <div class="card-body custom-info-box">
+              <h3 class="card-title" style="color: #1E90FF">
+                Michel Freeman vs CEBAP and INSS (Instituto Nacional do Seguro Social)
+                </h3>
+      <p class="card-text">This case involved an 83-year-old client who noticed unexplained deductions from his retirement payments. After a thorough investigation, I discovered that a private association had been unlawfully withdrawing funds for nearly four years without his consent. Despite the INSS claiming the deductions were authorized, no signed document existed. I filed a lawsuit against both the association and the INSS, and after an online hearing, we won — recovering all the wrongfully deducted payments plus compensation for moral and material damages.
       </p>
+      </div>
+          </div>
+
+        </div>
+      </div>
+      </div>
+  </div>
+</div>
 
 
     <div class="text-center mt-5 pb-5 mb-5">
       <h2>Projects</h2>
-      <h3>Automation project for juridical team high performace</h3>
-      <p>In this project, i acted as a consultant for the legal team,and our main goal was to optimize the daily tasks. We've used our own API and python for training the model to recognize the patterns in some juridical documments and we did an reiforcment training with some data that we got in about 1000 different spreadsheets for a precise algorithmical behaivor.
-        We also did a NPL (Natural Language Processing) training for the model to be able to read and understand the context of a juridical documment, and based on that, generate tasks for the legal team, like "analyze this case for a possible retirement benefit" or "check the deadlines for this lawsuit".
+
+      <div class="container mt-5">
+  <div class="position-relative overflow-hidden rounded-4 shadow-lg" style="max-width: 900px; margin: 0 auto;">
+    <img src="{{ url_for('static', filename='img/lawtech2.jpg') }}" class="img-fluid w-100" alt="Mia">
+    <div class="position-absolute bottom-0 start-0 w-100 p-4">
+      <h3 class="fw-bold mb-2" style="color: white">Automation project for juridical team high performace</h3>
+      <p class="mb-0"style="color: white">
+        In this project, I worked as a consultant for the legal team to optimize daily tasks. Using our own API and Python, we trained a model to recognize patterns in legal documents, reinforced with data from over 1,000 spreadsheets for accuracy. We also implemented NLP so the model could understand legal document contexts and automatically generate relevant tasks, such as identifying potential benefits or checking case deadlines.
       </p>
+    </div>
+  </div>
+</div>
 
       <h3>Project Hotei</h3>
       <p>This was a small risk analysys that i did for my post-degree conclusion project, that involves an AI assistant for building pettions, give lawyers some advices for juridical acts, and help with client support, making a profile of each type of client, and then making a personalized customer service.</p>
