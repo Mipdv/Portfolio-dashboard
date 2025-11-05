@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  teste
+{% endblock %}
+
+{% block main %}
+<h1 class="pt-5 mt-5">Henrique "Mip" Marinho</h1>
+  <h2 class="mb-3 text-secondary">27-year-old Full-time Lawyer| Post-graduted in Legal Operations | Specialist in Brazil's Social Security | Legal Consultant in Software Automation Projects  </h2>
+  <div class="mt-3">
+    <nav class="nav">
+      <a href="https://www.linkedin.com/in/henrique-marinho-2216982b6/" class="btn btn-primary me-4">Linkedln</a>
+      <a href="https://www.instagram.com/marinnhohm?igsh=eHZiM21zZnM0cWcy&utm_source=qr" class="btn btn-primary me-4">Instagram</a>
+      <a href="https://www.instagram.com/marinnhohm?igsh=eHZiM21zZnM0cWcy&utm_source=qr" class="btn btn-primary me-4">GitHub</a>
+      <a href="https://x.com/Miploys" class="btn btn-primary me-4">X(twitter)</a>
+  </div>
+
+    <div class="mt-5">
+      <h2>About Me</h2>
+      <p>Hi! I'm Henrique Marinho, a 27 year old lawyer that likes inovation, tecnologies, progressive laws, cinema and games in general.</p>
+      <p>I am currently studing programing by myself, with some online courses, like CS50, Data ICMC SQL (From Brazil's USP University) and planing to take Javanauta Academy and CS193p swift course by Stanford University, but i plain to start Informations Systems degree in 2026. </p>
+      <p>My main goal is to become a full-stack devoloper, but data science field is very appel to me, and mobile too. Probably, i will decide with time, and for now, i gotta maintain my foucus, only looking for geting better with studies and praticing at programing. </p>
+      <p>As for my actual job, i have 6 years experience in social security field, acting as a lawyer in Marcos Inácio Advogaods, one of the biggest Brazil's Law firms, and consultant for lawsuits against the federal goverment, specially involving injurie law, retiremnts, death pensions, paid maternity leaves, and pensions for disable persons. I have acted in more than 1000 cases, with federal courts and supreme courts, working from the begining to the end of the case. </p>
+      <p>In the same subject, i've acted as a legal consultant in automation projects, aiming to increase the legal team performace, eliminating redundant tasks, providing a fast and safe task's distributions and doing a reinforced learning to teach the algorith to recognize legal terms and generate tasks based on the content of a document or a legal act to be provided. </p>
+      <p>Beyond my professional life and pursuits, i love to watch horror and sci-fi movies, read some east european books and beyond that, play some video games, mainly on Nitendo Switch 2. </p>
+    </div>
+
+  <div class="container mt-5">
+  <div class="card mb-3 custom-card">
+    <div class="row g-0 h-100">
+      
+      <div class="col-md-4 card-img-container">
+        <img src="{{ url_for('static', filename='img/mia.png') }}" 
+             class="img-fluid rounded-start h-100 object-fit-cover" 
+             alt="Mia">
+      </div>
+      
+      <div class="col-md-12">
+        <div class="card-body custom-info-box">
+          <h2 class="card-title">Prominent Cases</h2>
+          <p class="card-text">
+            In this topic, I will use fictional names, for client policy.
+          </p>
+
+          <h3 class="card-title">
+            Elizabeth Wilson vs INSS (Instituto Nacional do Seguro Social)
+          </h3>
+          <p class="card-text">
+            In this case, I acted as the main lawyer for a 45-year-old disabled woman represented by her sister, 
+            who lost her social security benefit, apparently, due to a lack of update in her Cadúnico 
+            (a mandatory document for this type of benefit).<br><br>
+
+            After a deep investigation, I found that her father had passed away 10 years before she gained that benefit. 
+            Knowing that she had her diagnosis since she was 25 years old, I discovered that the benefit 
+            had been wrongfully granted — and that she had the right to a permanent death pension, 
+            since her father was retired when he passed away.<br><br>
+
+            After hard litigation, we won the case in federal court, and she received 
+            five years of back payments, plus a new pension that is now permanent 
+            and will last for her lifetime.
+          </p>
+
+          <div class="d-flex flex-wrap gap-2 mt-3"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+      <h3>Michel Freeman vs CEBAP (Centro de Estudos dos Benefícios dos Aposentados e Pensionistas) and INSS (Instituto Nacional do Seguro Social)</h3>
+      <p>This case was a chalenging one, since the client had 83 years old, and came to my office to report a discont on his retirement, and he was despered, since it wasn't a logical reson for that discount. After a deep research, i found that the association was monthy discounting his retirement before he could even question it, for about 4 years straight.
+        After going to the INSS local agency, he was told that discount was legal, and probably he had singed an oficial documment authorzing that discount, but he never received any document to sign. In this line, i filed a lawsuit against both the association and the INSS, claiming the ilegal discount and asking for all the back payments plus damages for material and moral distress.
+        After a online hearing, we wont the case, and he recived all the money that was wrongfully discounten, plus an extra amount for moral and material damages. Some months after the case was over, and federal investigation was openned against the association, that was found guilty of fraud and ilegal acts against other retirees too.
+      </p>
+
+
+    <div class="text-center mt-5 pb-5 mb-5">
+      <h2>Projects</h2>
+      <h3>Automation project for juridical team high performace</h3>
+      <p>In this project, i acted as a consultant for the legal team,and our main goal was to optimize the daily tasks. We've used our own API and python for training the model to recognize the patterns in some juridical documments and we did an reiforcment training with some data that we got in about 1000 different spreadsheets for a precise algorithmical behaivor.
+        We also did a NPL (Natural Language Processing) training for the model to be able to read and understand the context of a juridical documment, and based on that, generate tasks for the legal team, like "analyze this case for a possible retirement benefit" or "check the deadlines for this lawsuit".
+      </p>
+
+      <h3>Project Hotei</h3>
+      <p>This was a small risk analysys that i did for my post-degree conclusion project, that involves an AI assistant for building pettions, give lawyers some advices for juridical acts, and help with client support, making a profile of each type of client, and then making a personalized customer service.</p>
+
+      <h3>Roraima State Indigenous People Project</h3>
+      <p>This project was an enbrionary idea for bring my law firm services to Indigenous people from Roraima State, in northen part of Brazil, specially for the Yanomami tribe, since they had a challenging time in 2022, and they mostly lives on a isolated area. One of our main goals was to make a remote support for families that needs a goverment benefit, and helping with comunication, because most of the Yanomami's reserve doesn't have a properly internet conection.
+        We also helped with some paid maternity leaves for indigenous women, and some retirement and disable pensions benefits for eldery people from the tribe.
+      </p>
+
+      <div class=" text-center mt-5 pb-5 mb-5">
+        <h4>And inside this portfolio, i have two experimental projects</h4>
+        <article>
+          <h5>On section 2 of this website, i've made a mini dashboard about a analysys of USA's courts behaivor, generating insights for students and visitors.</h5>
+          <h5>On section 3, there's a AI powered chatbot to ask questions about the juridical world and to clarify some doubts about legal terms and to compare the USA justice system with your home country.</h5>
+        </article>
+      </div>
+{% endblock %}
