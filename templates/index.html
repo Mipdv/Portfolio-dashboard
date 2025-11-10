@@ -32,7 +32,7 @@
           </p>
       </div>
 <div class="container mt-5">
-  <div class="card mb-3 custom-card">
+  <div class="card mb-3 custom-card zoomin">
     <div class="row g-0 h-100"> 
       
       <div class="col-md-4 card-img-container">
@@ -64,7 +64,7 @@
     <div class="container mt-5">
       <div class="row justify-content-end"> <div class="col-md-9 col-lg-8 ms-auto"> 
       
-      <div class="card mb-3 custom-card">
+      <div class="card mb-3 custom-card zoomin">
         <div class="row g-0 h-100"> 
           
           <div class="col-md-4 card-img-container">
@@ -94,8 +94,8 @@
       <h2>Projects</h2>
 
       <div class="container mt-5">
-  <div class="position-relative overflow-hidden rounded-4 shadow-lg" style="max-width: 700px; margin: 0 auto;">
-    <img src="{{ url_for('static', filename='img/lawtech2.jpg') }}" class="img-fluid w-100" alt="Mia">
+  <div class="position-relative overflow-hidden rounded-4 shadow-lg scroll" style="max-width: 700px; margin: 0 auto;">
+    <img src="{{ url_for('static', filename='img/lawtech2.jpg') }}" class="img-fluid w-100" alt="Lawtech">
     <div class="position-absolute bottom-0 start-0 w-100 p-4">
       <h3 class="fw-bold mb-2" style="color:#E6F7FF">Automation project for juridical team high performace</h3>
       <p class="mb-0"style="color: #E6F7FF">
@@ -109,8 +109,8 @@
   <div class="row g-4">
     
     <div class="col-md-6">
-      <div class="card bg-dark text-light shadow-lg border-0 rounded-4 overflow-hidden h-100">
-        <img src="{{ url_for('static', filename='img/tori.jpeg') }}" 
+      <div class="card hide-img bg-dark text-light shadow-lg border-0 rounded-4 overflow-hidden h-100">
+        <img src="{{ url_for('static', filename='img/tori.jpeg') }}"
              class="img-fluid object-fit-cover" 
              alt="Project Hotei">
         <div class="card-body p-4">
@@ -125,8 +125,8 @@
     </div>
 
 <div class="col-md-6">
-      <div class="card bg-dark text-light shadow-lg border-0 rounded-4 overflow-hidden h-100">
-        <img src="{{ url_for('static', filename='img/amazon.jpg') }}" 
+      <div class="card hide-img bg-dark text-light shadow-lg border-0 rounded-4 overflow-hidden h-100">
+        <img src="{{ url_for('static', filename='img/amazon.jpg') }}"
              class="img-fluid object-fit-cover" 
              alt="Roraima Indigenous Project" style="filter:blur(4px)">
         <div class="card-body p-4">
@@ -151,7 +151,8 @@
           <h5>On section 3, there's a AI powered chatbot to ask questions about the juridical world and to clarify some doubts about legal terms and to compare the USA justice system with your home country.</h5>
         </article>
       </div>
-<div class="contact-container">
+
+      <div class="contact-container">
   <div class="contactme">
     <div class="contact-me">
       <img src="{{ url_for('static', filename='img/justice1.png')}}">
@@ -172,4 +173,6 @@
     </form>
   </div>
 </div>
+
+<script src="{{ url_for('static', filename='js/script.js')}}"></script>
 {% endblock %}
