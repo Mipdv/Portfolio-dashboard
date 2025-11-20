@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+
+<h1>Dashboard</h1>
+
+<div id="graph1"></div>
+<div id="graph2"></div>
+
+<script>
+    var graph1 = {{ graph1 | safe }};
+    Plotly.newPlot("graph1", graph1.data, graph1.layout);
+
+    var graph2 = {{ graph2 | safe }};
+    Plotly.newPlot("graph2", graph2.data, graph2.layout);
+</script>
+
+</body>
+</html>
