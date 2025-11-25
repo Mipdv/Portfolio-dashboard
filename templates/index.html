@@ -1,32 +1,49 @@
 {% extends "layout.html" %}
 
 {% block title %}
-  teste
+  Mip's Portfolio
 {% endblock %}
 
 {% block main %}
-<h1 class="pt-5 mt-5" style="color: #1E90FF">Henrique "Mip" Marinho</h1>
+<h1 class="pt-5 mt-5 bolder" style="color: #1E90FF">Henrique "Mip" Marinho</h1>
   <h2 class="mb-3 text-secondary">Full-time Lawyer| Post-graduted in Legal Operations | Specialist in Brazil's Social Security | Legal Consultant in Software Automation Projects  </h2>
   <div class="mt-3">
     <nav class="nav">
-      <a href="https://www.linkedin.com/in/henrique-marinho-2216982b6/" class="btn btn-primary me-5">Linkedln</a>
-      <a href="https://www.instagram.com/marinnhohm?igsh=eHZiM21zZnM0cWcy&utm_source=qr" class="btn btn-primary me-5">Instagram</a>
-      <a href="https://www.instagram.com/marinnhohm?igsh=eHZiM21zZnM0cWcy&utm_source=qr" class="btn btn-primary me-5">GitHub</a>
-      <a href="https://x.com/Miploys" class="btn btn-primary me-5">X(twitter)</a>
+      <a href="https://www.linkedin.com/in/henrique-marinho-2216982b6/" class="btn btn-primary me-5" target="_blank">Linkedln</a>
+      <a href="https://www.instagram.com/marinnhohm?igsh=eHZiM21zZnM0cWcy&utm_source=qr" class="btn btn-primary me-5" target="_blank">Instagram</a>
+      <a href="https://github.com/Mipdv?tab=overview&from=2025-10-01&to=2025-10-31" class="btn btn-primary me-5" target="_blank">GitHub</a>
+      <a href="https://x.com/Miploys" class="btn btn-primary me-5" target="_blank">X(twitter)</a>
+      <a href="https://docs.google.com/document/d/1x_6JJsGUY1UZkuv-3DUuQnmfxGg4vJAH/edit?usp=share_link&ouid=101415249838012280065&rtpof=true&sd=true" 
+      target="_blank"
+      class="btn btn-primary me-5"
+      rel="noopener noreferrer">Resume</a>
   </div>
 
-    <div class="mt-5">
-      <h2>About Me</h2>
-      <p>Hi! I'm Henrique Marinho, a lawyer that likes inovation, tecnologies, progressive laws, cinema and games in general.</p>
-      <p>I am currently studing programing by myself, with some online courses, like CS50, Data ICMC SQL (From Brazil's USP University) and planing to take Javanauta Academy and CS193p swift course by Stanford University, but i plain to start Informations Systems degree in 2026. </p>
-      <p>My main goal is to become a full-stack devoloper, but data science field is very appel to me, and mobile too. Probably, i will decide with time, and for now, i gotta maintain my foucus, only looking for geting better with studies and praticing at programing. </p>
-      <p>As for my actual job, i have 6 years experience in social security field, acting as a lawyer in Marcos Inácio Advogaods, one of the biggest Brazil's Law firms, and consultant for lawsuits against the federal goverment, specially involving injurie law, retiremnts, death pensions, paid maternity leaves, and pensions for disable persons. I have acted in more than 1000 cases, with federal courts and supreme courts, working from the begining to the end of the case. </p>
-      <p>In the same subject, i've acted as a legal consultant in automation projects, aiming to increase the legal team performace, eliminating redundant tasks, providing a fast and safe task's distributions and doing a reinforced learning to teach the algorith to recognize legal terms and generate tasks based on the content of a document or a legal act to be provided. </p>
-      <p>Beyond my professional life and pursuits, i love to watch horror and sci-fi movies, read some east european books and beyond that, play some video games, mainly on Nitendo Switch 2. </p>
+ <div class="container about-container zoom-fade">
+  <div class="row align-items-start">
+    
+    <div class="col-md-4 text-center about-image">
+      <img src="{{ url_for('static', filename='img/Mip.jpg') }}" alt="That's me">
     </div>
 
+    <div class="col-md-8 about-text">
+      <h2 id="about"class="bolder">About Me</h2>
+      <p>Hi! I'm Henrique Marinho, a lawyer who enjoys innovation, technology, progressive laws, cinema, and games in general.</p>
+
+<p>I am currently studying programming by myself through online courses, such as CS50, Data ICMC SQL (from Brazil's USP University), and I plan to take Javanauta Academy and the CS193p Swift course by Stanford University. I also intend to start an Information Systems degree in 2026.</p>
+
+<p>My main goal is to become a full-stack developer, but the data science field is also very appealing to me, as well as mobile development. I will probably decide with time. For now, I need to maintain my focus, improving my studies and practicing programming.</p>
+
+<p>Regarding my current job, I have 6 years of experience in the social security field, working as a lawyer at Marcos Inácio Advogados, one of Brazil's largest law firms, and as a consultant for lawsuits against the federal government—especially involving injury law, retirements, death pensions, paid maternity leave, and disability benefits. I have worked on more than 1,000 cases in federal and supreme courts, handling processes from beginning to end.</p>
+
+<p>In the same field, I have acted as a legal consultant in automation projects aimed at increasing the legal team's performance, eliminating redundant tasks, providing fast and safe task distribution, and applying reinforcement learning to teach algorithms to recognize legal terms and generate tasks based on the contents of documents or legal acts.</p>
+
+<p>Beyond my professional life, I love watching horror and sci-fi movies, reading Eastern European literature, and playing video games—mainly on the Nintendo Switch 2.</p>
+    </div>
+  </div>
+
     <div class="text-center mt-5">
-     <h2 style="color: #1E90FF">Prominent Cases</h2>
+     <h2 id ="cases" class="bolder" style="color: #1E90FF">Prominent Cases</h2>
           <p>
             In this topic, I will use fictional names, for client policy.
           </p>
@@ -44,7 +61,7 @@
       <div class="col-md-8">
         <div class="card-body custom-info-box">
           
-          <h3 class="card-title" style="color: #1E90FF">
+          <h3 class="card-title bolder" style="color: #1E90FF">
             Elizabeth Wilson vs INSS (Instituto Nacional do Seguro Social)
           </h3>
           <p class="card-text">
@@ -74,8 +91,8 @@
           </div>
           
           <div class="col-md-8">
-            <div class="card-body custom-info-box">
-              <h3 class="card-title" style="color: #1E90FF">
+            <div id= "card-scroll" class="card-body custom-info-box">
+              <h3 class="card-title bolder" style="color: #1E90FF">
                 Michel Freeman vs CEBAP and INSS (Instituto Nacional do Seguro Social)
                 </h3>
       <p class="card-text">This case involved an 83-year-old client who noticed unexplained deductions from his retirement payments. After a thorough investigation, I discovered that a private association had been unlawfully withdrawing funds for nearly four years without his consent. Despite the INSS claiming the deductions were authorized, no signed document existed. I filed a lawsuit against both the association and the INSS, and after an online hearing, we won — recovering all the wrongfully deducted payments plus compensation for moral and material damages.
@@ -91,15 +108,15 @@
 
 
     <div class="text-center mt-5 pb-5 mb-5">
-      <h2>Projects</h2>
+      <h2 id="projects" class="bolder" style="color: #1E90FF">Projects</h2>
 
       <div class="container mt-5">
   <div class="position-relative overflow-hidden rounded-4 shadow-lg scroll" style="max-width: 700px; margin: 0 auto;">
     <img src="{{ url_for('static', filename='img/lawtech2.jpg') }}" class="img-fluid w-100" alt="Lawtech">
     <div class="position-absolute bottom-0 start-0 w-100 p-4">
       <h3 class="fw-bold mb-2" style="color:#E6F7FF">Automation project for juridical team high performace</h3>
-      <p class="mb-0"style="color: #E6F7FF">
-        In this project, I worked as a consultant for the legal team to optimize daily tasks. Using our own API and Python, we trained a model to recognize patterns in legal documents, reinforced with data from over 1,000 spreadsheets for accuracy. We also implemented NLP so the model could understand legal document contexts and automatically generate relevant tasks, such as identifying potential benefits or checking case deadlines.
+      <p class="mb-0" style="color: #E6F7FF">
+        In this project, I worked as a consultant for the legal team to optimize daily tasks. Using our own API and Python, we trained a model to recognize patterns in legal documents, reinforced with data from over 1,000 spreadsheets for accuracy. We also implemented NLP so the model could understand the context of legal documents and automatically generate relevant tasks, such as identifying potential benefits or checking case deadlines.
       </p>
     </div>
   </div>
@@ -114,12 +131,12 @@
              class="img-fluid object-fit-cover" 
              alt="Project Hotei">
         <div class="card-body p-4">
-          <h3 class="fw-bold mb-3" style="color: #1E90FF">Project Hotei</h3>
-          <p class="text-light mb-0">
-            This project was part of my post-graduate research, focused on an AI assistant 
-            for building petitions, providing legal insights, and supporting clients 
-            with personalized service through automated profiling and document analysis.
-          </p>
+          <h3 class="bolder mb-3" style="color: #1E90FF">Project Hotei</h3>
+       <p class="text-light mb-0">
+          This project was part of my post-graduate research, focused on developing an AI assistant 
+          for drafting petitions, providing legal insights, and supporting clients through 
+          personalized service powered by automated profiling and document analysis.
+        </p>
         </div>
       </div>
     </div>
@@ -130,12 +147,12 @@
              class="img-fluid object-fit-cover" 
              alt="Roraima Indigenous Project" style="filter:blur(4px)">
         <div class="card-body p-4">
-          <h3 class="fw-bold mb-3" style="color: #1E90FF">Roraima State Indigenous People Project</h3>
-          <p class="text-light mb-0">
-            A social initiative to extend legal aid to Indigenous communities in northern Brazil, 
-            especially the Yanomami tribe. The project focused on helping with remote 
-            benefit applications, maternity leave rights, and retirement pensions 
-            in areas with limited internet access.
+          <h3 class="bolder mb-3" style="color: #1E90FF">Roraima State Indigenous People Project</h3>
+        <p class="text-light mb-0">
+            A social initiative aimed at expanding legal assistance to Indigenous communities 
+            in northern Brazil, especially the Yanomami tribe. The project focused on helping 
+            with remote benefit applications, maternity leave rights, and retirement pensions 
+            in regions with limited internet access.
           </p>
         </div>
       </div>
@@ -145,10 +162,11 @@
 </div>
 
       <div class=" text-center mt-5 pb-5 mb-5">
-        <h2 style="color: #1E90FF">And inside this portfolio, i have two experimental projects</h4>
+        <h2 style="color: #1E90FF" class="bolder">And inside this portfolio, i have a small experimental project</h4>
         <article>
-          <h5>On section 2 of this website, i've made a mini dashboard about a analysys of USA's courts behaivor, generating insights for students and visitors.</h5>
-          <h5>On section 3, there's a AI powered chatbot to ask questions about the juridical world and to clarify some doubts about legal terms and to compare the USA justice system with your home country.</h5>
+          <h5>
+            On the <a href="/dashboard" target="_blank">dashboard</a> section, I've created a mini dashboard analyzing the composition of the U.S. Federal Courts by judges, Supreme Court decisions, and cases per year, generating insights for students and visitors.
+          </h5>
         </article>
       </div>
 
@@ -156,20 +174,21 @@
   <div class="contactme">
     <div class="contact-me">
       <img src="{{ url_for('static', filename='img/justice1.png')}}">
-      <h2>Mail me something!</h2>
+      <h2 id="contact-me" class="bolder">Mail me something!</h2>
       <p class="align-items: center;">I will respond as soon as possible!</p>
     </div>
   </div>
 
   <div class="col-md-9 col-lg-8 ms-auto">
-    <form class="contact-form">
-      <h2>Contact me!</h2>
+    <form class="contact-form" action="/submit" method="post">
+      <input type="hidden" name="orign" value="index">
+      <h2 class="bolder">Contact me!</h2>
       <div class="input-row">
-        <input type="email" class="form-control" placeholder="E-mail" required>
-        <input type="text" class="form-control" placeholder="Subject" required>
+        <input name="email" type="email" class="form-control" placeholder="E-mail" required>
+        <input name="subject" type="text" class="form-control" placeholder="Subject" required>
       </div>
-      <textarea class="form-control" placeholder="Leave a suggestion!" rows="4" required></textarea>
-      <button type="submit" class="btn btn-primary mt-3">Send</button>
+      <textarea name="message" class="form-control" placeholder="Leave something!" rows="4" required></textarea>
+      <button type="submit" class="btn btn-primary mt-3 bolder">Send</button>
     </form>
   </div>
 </div>
