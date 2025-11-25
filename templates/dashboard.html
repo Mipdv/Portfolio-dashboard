@@ -1,24 +1,99 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Dashboard</title>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-</head>
-<body>
+{% extends "layout.html" %}
 
-<h1>Dashboard</h1>
+{% block title %}
+  Justice Dashboard
+{% endblock %}
 
-<div id="graph1"></div>
-<div id="graph2"></div>
+{% block main %}
+<h1 class="text-center bolder pt-5 mt-5 bolder" style="color: #1E90FF">Dashboard</h1>
+<p> The data used was provided by official sources, like <a href="https://www.fjc.gov/history/judges/biographical-directory-article-iii-federal-judges-export" target="_blank">FJC Website</a>
+and <a href="https://scdb.la.psu.edu/data/2025-release-01/" target="_blank">PennState Supreme Court Database</a> and used only for data analysis and graphic demonstration.</p>
 
-<script>
-    var graph1 = {{ graph1 | safe }};
-    Plotly.newPlot("graph1", graph1.data, graph1.layout);
 
-    var graph2 = {{ graph2 | safe }};
-    Plotly.newPlot("graph2", graph2.data, graph2.layout);
-</script>
+<div class="container mt-4">
 
-</body>
-</html>
+
+    <div class="card mb-4 zoom-fade">
+        <div class="card-body">
+            {{ graph1 | safe }}
+            <p style="color: #f8f9fa">This graphic shows the Ethnic composition for the federal courts (till 11/22/2025), and we can see a majority white prevalence, followed by African Americans and Asian Americans.</p>
+        </div>
+    </div>
+
+    <div class="card mb-4 zoomin">
+        <div class="card-body">
+            {{ graph5 | safe }}
+            <p style="color: #f8f9fa">In the last 10 years, we can still see a majority of white judges in the court composition, but there is small growing in others ethnicities, making the federal courts with more diversity.</p>
+        </div>
+    </div>
+
+
+    <div class="card mb-4 zoomin">
+        <div class="card-body">
+            {{ graph2 | safe }}
+            <p style="color: #f8f9fa">Here, we can see the gender distribution for the federal courts judges, with a vast majority of males composing it. Although, as we can see here, the number of female composition is gradualy growing, floating between the years.</p>
+        </div>
+    </div>
+
+
+    <div class="card mb-4 zoomin">
+        <div class="card-body">
+            {{ graph3 | safe }}
+        </div>
+    </div>
+
+  
+    <div class="card mb-4 zoomin">
+        <div class="card-body">
+            {{ graph6 | safe }}
+            <p style="color: #f8f9fa">Here, we can see the US map with the birth state of every federal judge born in the USA. It's important to notice that New York has the vast majority of judges, followed by Pennsylvania and California</p>
+        </div>
+    </div>
+
+
+    <div class="card mb-4 zoomin">
+        <div class="card-body">
+            {{ graph4 | safe }}
+        </div>
+    </div>
+
+    <div class="card mb-4 zoomin">
+        <div class="card-body">
+            {{ graph7 | safe }}
+            <p style="color: #f8f9fa">This graph shows the number of new cases per year in US supreme court. Notice that I've used the ofical Justice Centered Dockect CSV analyze the data. We can see a decrease in the number of cases from the last 35 years till now. </p>
+        </div>
+    </div>
+
+
+    <div class="card mb-4 zoomin">
+        <div class="card-body">
+            {{ graph8 | safe }}
+            <p style="color: #f8f9fa">This Pie Graph shows the Supreme Court decisions based on the decisions types, with the respective label about every decision (From 1 to 11). We can see a majority of Oral Argument decisions.</p>
+        </div>
+    </div>
+
+          <div class="contact-container">
+  <div class="contactme">
+    <div class="contact-me">
+      <img src="{{ url_for('static', filename='img/justice1.png')}}">
+      <h2 id="contact-me" class="bolder">Mail me something!</h2>
+      <p class="align-items: center;">I will respond as soon as possible!</p>
+    </div>
+  </div>
+
+  <div class="col-md-9 col-lg-8 ms-auto">
+    <form class="contact-form" action="/submit" method="post">
+        <input type="hidden" name="orign" value="dashboard">
+      <h2 class="bolder">Contact me!</h2>
+      <div class="input-row">
+        <input name="email" type="email" class="form-control" placeholder="E-mail" required>
+        <input name="subject" type="text" class="form-control" placeholder="Subject" required>
+      </div>
+      <textarea name="message" class="form-control" placeholder="Leave something!" rows="4" required></textarea>
+      <button type="submit" class="btn btn-primary mt-3 bolder">Send</button>
+    </form>
+  </div>
+</div>
+<script src="{{ url_for('static', filename='js/script.js')}}"></script>
+</div>
+{% endblock %}
