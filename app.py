@@ -61,7 +61,7 @@ def dashboard():
 
     pio.templates.default = "darkbg"
     
-    df_demo = pd.read_csv("demographics.csv", dtype=str)
+    df_demo = pd.read_csv("data/demographics.csv", dtype=str)
 
     df_demo["Race or Ethnicity"] = df_demo["Race or Ethnicity"].str.strip()
 
@@ -96,7 +96,7 @@ def dashboard():
     )
     graph2 = fig2.to_html(full_html=False, include_plotlyjs=False)
     
-    df_service = pd.read_csv("federal-judicial-service.csv", dtype=str)
+    df_service = pd.read_csv("data/federal-judicial-service.csv", dtype=str)
 
     df_gender = df_demo[["nid", "Gender"]].copy()
     df_date = df_service[["nid", "Commission Date"]].copy()
@@ -139,7 +139,7 @@ def dashboard():
 
     graph3 = fig3.to_html(full_html=False, include_plotlyjs=False)
 
-    df_scdb = pd.read_csv("SCDB_2025_01_justiceCentered_Citation.csv")
+    df_scdb = pd.read_csv("data/SCDB_2025_01_justiceCentered_Citation.csv")
 
     df_scdb['dateDecision'] = pd.to_datetime(df_scdb['dateDecision'], errors='coerce')
     df_scdb.dropna(subset=['dateDecision'], inplace=True)
@@ -224,7 +224,7 @@ def dashboard():
 
     graph6 = fig6.to_html(full_html=False, include_plotlyjs=False)
 
-    df_docket = pd.read_csv("SCDB_2025_01_justiceCentered_Docket.csv")
+    df_docket = pd.read_csv("data/SCDB_2025_01_justiceCentered_Docket.csv")
 
     
     df_docket['dateDecision'] = pd.to_datetime(df_docket['dateDecision'], errors='coerce')
