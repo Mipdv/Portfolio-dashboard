@@ -72,7 +72,7 @@ and <a href="https://scdb.la.psu.edu/data/2025-release-01/" target="_blank">Penn
         </div>
     </div>
 
-          <div class="contact-container">
+      <div class="contact-container">
   <div class="contactme">
     <div class="contact-me">
       <img src="{{ url_for('static', filename='img/justice1.png')}}">
@@ -81,10 +81,10 @@ and <a href="https://scdb.la.psu.edu/data/2025-release-01/" target="_blank">Penn
     </div>
   </div>
 
-  <div class="col-md-9 col-lg-8 ms-auto">
+    <div class="col-md-9 col-lg-8 ms-auto">
     <form class="contact-form" action="/submit" method="post">
-        <input type="hidden" name="orign" value="dashboard">
-      <h2 class="bolder">Contact me!</h2>
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <h2 class="bolder align">Contact me!</h2>
       <div class="input-row">
         <input name="email" type="email" class="form-control" placeholder="E-mail" required>
         <input name="subject" type="text" class="form-control" placeholder="Subject" required>
@@ -94,6 +94,6 @@ and <a href="https://scdb.la.psu.edu/data/2025-release-01/" target="_blank">Penn
     </form>
   </div>
 </div>
+
 <script src="{{ url_for('static', filename='js/script.js')}}"></script>
-</div>
 {% endblock %}
