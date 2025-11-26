@@ -49,7 +49,7 @@
           </p>
       </div>
 <div class="container mt-5">
-  <div class="card mb-3 custom-card zoomin">
+  
     <div class="row g-0 h-100"> 
       
       <div class="col-md-4 card-img-container">
@@ -181,7 +181,7 @@
 
   <div class="col-md-9 col-lg-8 ms-auto">
     <form class="contact-form" action="/submit" method="post">
-      <input type="hidden" name="orign" value="index">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
       <h2 class="bolder">Contact me!</h2>
       <div class="input-row">
         <input name="email" type="email" class="form-control" placeholder="E-mail" required>
