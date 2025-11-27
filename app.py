@@ -267,4 +267,4 @@ def dashboard():
     return render_template("dashboard.html", graph1=graph1, graph2=graph2, graph3=graph3, graph4=graph4, graph5=graph5, graph6=graph6, graph7=graph7, graph8=graph8)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
