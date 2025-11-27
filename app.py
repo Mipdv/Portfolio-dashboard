@@ -39,12 +39,12 @@ def submit():
     email = request.form['email']
     subject = request.form['subject']
     message = request.form['message']
-    origin = request.form.get("orign", "index")
+    origin = request.form.get("origin", "index")#where it came from
     msg = Message('New Message!', sender=os.getenv('MAIL_USERNAME'), recipients=[os.getenv('MAIL_USERNAME')])
     msg.body = f"Message from: {email}\n{subject}\n\n{message}"
     mail.send(msg)
     if origin == "dashboard": #just a route adjust
-        return redirect(url_for("dashboard") + "#contact-me")
+        return redirect(url_for("dashboard") + "#contact-me")#Dashboard#contact-me
     else: 
         return redirect(url_for("index") + "#contact-me")
 
