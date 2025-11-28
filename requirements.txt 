@@ -1,7 +1,0 @@
-Flask
-Flask-Mail
-Flask-WTF
-python-dotenv
-pandas
-plotly
-gunicorn
