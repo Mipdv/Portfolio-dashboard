@@ -1,7 +1,5 @@
 Personal Portfolio + Dashboard Project
 
-https://www.youtube.com/watch?v=rQ5KlW-vX4Y
-
 This project is a personal portfolio, developed for CS50 final project.
 It is built with Flask, Bootstrap 5, HTML/CSS, and Plotly for interactive visualizations.
 
